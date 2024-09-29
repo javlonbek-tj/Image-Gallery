@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <img src="images/bg-image.jpg" alt="image" class="bg__image" />
+    <div class="bg__blur"></div>
+    <!--==================== HEADER ====================-->
+
+    <header class="header" id="header">
+      <div class="header__content">
+        <form class="header__search" id="header-form">
+          <button class="header__button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input
+            type="search"
+            placeholder="Search images"
+            class="header__input"
+            id="header-input"
+            autocomplete="off"
+          />
+        </form>
+        <div class="header__actions">
+          <i class="fa-regular fa-bell"></i>
+          <i class="fa-regular fa-user"></i>
+        </div>
+      </div>
+    </header>
+
+    <!--==================== NAV ====================-->
+    <nav class="nav" id="nav">
+      <div class="nav__menu">
+        <a href="#" class="nav__logo">Image Gallery</a>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="" class="nav__link">
+              <i class="fa fa-dog"></i> <span>Animals</span>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link">
+              <i class="fa fa-leaf"></i> <span>Nature</span>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link">
+              <i class="fa fa-building-columns"></i>
+              <span>Street Photography</span>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a href="" class="nav__link">
+              <i class="fa fa-location-dot"></i> <span>Travel</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav__profile">
+          <a href="" class="nav__link"
+            ><i class="fa fa-user"></i> <span>Profile</span></a
+          >
+        </div>
+      </div>
+
+      <a href="" class="nav__link nav__link--logout"
+        ><i class="fa fa-right-from-bracket"></i> <span>Logout</span></a
+      >
+    </nav>
+
+    <!--==================== Section Cards====================-->
+    <section class="section">
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <!--==================== Footer ====================-->
+    <footer class="footer" id="footer">
+      <div class="footer-container">
+        <div>
+          <span class="footer-year">&copy; 2024</span>
+          <a href="https://github.com/javlonbek-tj" class="github-link"
+            >javlonbek-tj</a
+          >
+        </div>
+        <a
+          href="https://rs.school/courses/javascript-preschool-ru"
+          class="rss"
+        ></a>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
