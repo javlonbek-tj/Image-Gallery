@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as vars;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: initial;
+  right: 0;
+  width: calc(100% - 28rem);
+  z-index: 10;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.4rem;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 40rem;
+    padding-inline: 2rem;
+    background-color: hsla(0, 0%, 100%, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 0.8rem;
+
+    & i {
+      font-size: 1.6rem; // Set the icon size
+      color: #fff;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 1.8rem;
+    background-color: transparent;
+    padding-block: 1.6rem;
+    color: vars.$color-white;
+
+    &::placeholder {
+      color: vars.$color-white;
+    }
+  }
+
+  &__button {
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+  }
+}
+
+.blur-header::after {
+  content: '';
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); // For safari
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

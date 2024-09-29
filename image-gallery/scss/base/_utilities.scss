@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as vars;
+
+i {
+  font-size: 2.4rem;
+  color: vars.$color-white;
+}
+
+a {
+  text-decoration: none;
+  color: vars.$color-white;
+}
