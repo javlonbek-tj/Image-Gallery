@@ -11,6 +11,7 @@ window.addEventListener('scroll', blurHeader);
 const inputEl = document.querySelector('#header-input');
 const formEl = document.querySelector('#header-form');
 const cards = document.querySelector('#cards');
+const navListEl = document.querySelector('.nav__list');
 const accessKey = 'pmlft7NqH_BaXn3F-HORWKGWRTYzoQT2x-UGVnuTnHE';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,11 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let keyword = '';
 
-async function searchImages() {
-  keyword = inputEl.value;
-  if (!keyword) {
-    keyword = 'water';
-  }
+async function searchImages(keyword) {
   const url = `https://api.unsplash.com/search/photos?query=${keyword}&per_page=24&orientation=landscape&client_id=${accessKey}`;
   const response = await fetch(url);
   const data = await response.json();
@@ -48,9 +45,21 @@ async function searchImages() {
 formEl.addEventListener('submit', (e) => {
   e.preventDefault();
   page = 1;
-  searchImages();
+  keyword = inputEl.value;
+  searchImages(keyword);
 });
 
 window.onload = () => {
-  searchImages();
+  searchImages('water');
 };
+
+navListEl.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const navLink = e.target.closest('.nav__link');
+
+  if (navLink) {
+    const category = navLink.querySelector('.img-category').textContent.trim();
+    searchImages(category);
+  }
+});
