@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as vars;
+
+.nav {
+  position: fixed;
+  left: 0;
+  right: initial;
+  top: 0;
+  width: 28rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  padding: 4rem 4.5rem;
+
+  &__menu,
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  &__logo,
+  &__list {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid vars.$color-white;
+  }
+
+  &__link,
+  &__logo {
+    font-size: 1.6rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+  }
+}
